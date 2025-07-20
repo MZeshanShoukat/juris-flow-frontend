@@ -19,7 +19,7 @@ import ContractManagement from "./components/lawyer/ContractManagement";
 import ClientOnboarding from "./components/lawyer/ClientOnboarding";
 import DocumentManagement from "./components/lawyer/DocumentManagement";
 import BillingInvoicing from "./components/lawyer/BillingInvoicing";
-import HRManagement from "./components/lawyer/HRManagement";
+import LawyerHRManagement from "./components/lawyer/HRManagement";
 import ReportsAnalytics from "./components/lawyer/ReportsAnalytics";
 import Settings from "./components/lawyer/Settings";
 
@@ -27,7 +27,7 @@ import Settings from "./components/lawyer/Settings";
 import SuperAdminLayout from "./components/superadmin/SuperAdminLayout";
 import SuperAdminDashboard from "./components/superadmin/SuperAdminDashboard";
 import UserManagement from "./components/superadmin/UserManagement";
-import HRManagement from "./components/superadmin/HRManagement";
+import SuperAdminHRManagement from "./components/superadmin/HRManagement";
 import SubscriptionManagement from "./components/superadmin/SubscriptionManagement";
 import SystemConfiguration from "./components/superadmin/SystemConfiguration";
 import DisputeResolution from "./components/superadmin/DisputeResolution";
@@ -67,7 +67,7 @@ const App = () => (
             <Route path="onboarding" element={<ClientOnboarding />} />
             <Route path="documents" element={<DocumentManagement />} />
             <Route path="billing" element={<BillingInvoicing />} />
-            <Route path="hr" element={<HRManagement />} />
+            <Route path="hr" element={<LawyerHRManagement />} />
             <Route path="reports" element={<ReportsAnalytics />} />
             <Route path="settings" element={<Settings />} />
           </Route>
@@ -76,7 +76,7 @@ const App = () => (
           <Route path="/superadmin" element={<SuperAdminLayout />}>
             <Route index element={<SuperAdminDashboard />} />
             <Route path="users" element={<UserManagement />} />
-            <Route path="hr" element={<HRManagement />} />
+            <Route path="hr" element={<SuperAdminHRManagement />} />
             <Route path="subscriptions" element={<SubscriptionManagement />} />
             <Route path="config" element={<SystemConfiguration />} />
             <Route path="disputes" element={<DisputeResolution />} />
