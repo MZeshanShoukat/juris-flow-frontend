@@ -17,7 +17,6 @@ import CaseManagement from "./components/lawyer/CaseManagement";
 import SuperAdminDashboard from "./components/superadmin/SuperAdminDashboard";
 
 // Client Module Components
-import ClientPortalLayout from "./components/client/ClientPortalLayout";
 import ClientPortal from "./components/client/ClientPortal";
 
 const queryClient = new QueryClient();
@@ -43,9 +42,7 @@ const App = () => (
           <Route path="/superadmin" element={<SuperAdminDashboard />} />
           
           {/* Client Module Routes */}
-          <Route path="/client" element={<ClientPortalLayout />}>
-            <Route index element={<ClientPortal />} />
-          </Route>
+          <Route path="/client" element={<ClientPortal />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
