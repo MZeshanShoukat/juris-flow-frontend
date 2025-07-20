@@ -12,6 +12,15 @@ import LawyerDashboard from "./components/lawyer/LawyerDashboard";
 import ProfileManagement from "./components/lawyer/ProfileManagement";
 import JobApplications from "./components/lawyer/JobApplications";
 import CaseManagement from "./components/lawyer/CaseManagement";
+import ChatInterface from "./components/lawyer/ChatInterface";
+import AppointmentManagement from "./components/lawyer/AppointmentManagement";
+import ContractManagement from "./components/lawyer/ContractManagement";
+import ClientOnboarding from "./components/lawyer/ClientOnboarding";
+import DocumentManagement from "./components/lawyer/DocumentManagement";
+import BillingInvoicing from "./components/lawyer/BillingInvoicing";
+import HRManagement from "./components/lawyer/HRManagement";
+import ReportsAnalytics from "./components/lawyer/ReportsAnalytics";
+import Settings from "./components/lawyer/Settings";
 
 // SuperAdmin Module Components
 import SuperAdminDashboard from "./components/superadmin/SuperAdminDashboard";
@@ -36,6 +45,15 @@ const App = () => (
             <Route path="profile" element={<ProfileManagement />} />
             <Route path="applications" element={<JobApplications />} />
             <Route path="cases" element={<CaseManagement />} />
+            <Route path="chat" element={<ChatInterface />} />
+            <Route path="appointments" element={<AppointmentManagement />} />
+            <Route path="contracts" element={<ContractManagement />} />
+            <Route path="onboarding" element={<ClientOnboarding />} />
+            <Route path="documents" element={<DocumentManagement />} />
+            <Route path="billing" element={<BillingInvoicing />} />
+            <Route path="hr" element={<HRManagement />} />
+            <Route path="reports" element={<ReportsAnalytics />} />
+            <Route path="settings" element={<Settings />} />
           </Route>
           
           {/* SuperAdmin Module Routes */}
