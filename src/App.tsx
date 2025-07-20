@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import AuthDemo from "./pages/AuthDemo";
 
 // Lawyer Module Components
 import LawyerLayout from "./components/lawyer/LawyerLayout";
@@ -28,6 +29,11 @@ import SuperAdminDashboard from "./components/superadmin/SuperAdminDashboard";
 // Client Module Components
 import ClientPortal from "./components/client/ClientPortal";
 
+// Auth Components
+import ClientLoginForm from "./components/auth/ClientLoginForm";
+import ClientSignupForm from "./components/auth/ClientSignupForm";
+import LawyerSignupProcess from "./components/auth/LawyerSignupProcess";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -38,6 +44,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/auth-demo" element={<AuthDemo />} />
           
           {/* Lawyer Module Routes */}
           <Route path="/lawyer" element={<LawyerLayout />}>
@@ -61,6 +68,11 @@ const App = () => (
           
           {/* Client Module Routes */}
           <Route path="/client" element={<ClientPortal />} />
+          
+          {/* Auth Routes */}
+          <Route path="/client/login" element={<ClientLoginForm />} />
+          <Route path="/client/signup" element={<ClientSignupForm />} />
+          <Route path="/lawyer/signup" element={<LawyerSignupProcess />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
