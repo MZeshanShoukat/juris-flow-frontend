@@ -24,7 +24,16 @@ import ReportsAnalytics from "./components/lawyer/ReportsAnalytics";
 import Settings from "./components/lawyer/Settings";
 
 // SuperAdmin Module Components
+import SuperAdminLayout from "./components/superadmin/SuperAdminLayout";
 import SuperAdminDashboard from "./components/superadmin/SuperAdminDashboard";
+import UserManagement from "./components/superadmin/UserManagement";
+import HRManagement from "./components/superadmin/HRManagement";
+import SubscriptionManagement from "./components/superadmin/SubscriptionManagement";
+import SystemConfiguration from "./components/superadmin/SystemConfiguration";
+import DisputeResolution from "./components/superadmin/DisputeResolution";
+import PaymentsRevenue from "./components/superadmin/PaymentsRevenue";
+import CaseOversight from "./components/superadmin/CaseOversight";
+import ContentCMS from "./components/superadmin/ContentCMS";
 
 // Client Module Components
 import ClientPortal from "./components/client/ClientPortal";
@@ -64,7 +73,17 @@ const App = () => (
           </Route>
           
           {/* SuperAdmin Module Routes */}
-          <Route path="/superadmin" element={<SuperAdminDashboard />} />
+          <Route path="/superadmin" element={<SuperAdminLayout />}>
+            <Route index element={<SuperAdminDashboard />} />
+            <Route path="users" element={<UserManagement />} />
+            <Route path="hr" element={<HRManagement />} />
+            <Route path="subscriptions" element={<SubscriptionManagement />} />
+            <Route path="config" element={<SystemConfiguration />} />
+            <Route path="disputes" element={<DisputeResolution />} />
+            <Route path="payments" element={<PaymentsRevenue />} />
+            <Route path="cases" element={<CaseOversight />} />
+            <Route path="content" element={<ContentCMS />} />
+          </Route>
           
           {/* Client Module Routes */}
           <Route path="/client" element={<ClientPortal />} />
